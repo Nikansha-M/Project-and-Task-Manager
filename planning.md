@@ -19,6 +19,9 @@
     1. python manage.py createsuperuser
 
 
-### Create Projects model in projects/models.py
-1. 3 attributes: name, description, members
-1. use __str__ method on name property
+### Create Projects model & register in admin
+1. In projects/models.py:
+    1. 3 attributes: name, description, members
+    1. use __str__ method on name property
+1. projects/admin.py:
+    2. 
