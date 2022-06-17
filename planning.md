@@ -17,3 +17,8 @@
     1. python manage.py migrate
 1. create a superuser
     1. python manage.py createsuperuser
+
+
+### Create Projects model in projects/models.py
+1. 3 attributes: name, description, members
+1. use __str__ method on name property
