@@ -23,5 +23,12 @@
 1. In projects/models.py:
     1. 3 attributes: name, description, members
     1. use __str__ method on name property
-1. projects/admin.py:
-    2. 
+1. projects/admin.py --- register Project model in the admin
+
+
+### ProjectListView
+1. in projects/views.py create ProjectListView
+1. in projects/urls.py register the view for a path in URLPATTERNS
+1. register the PROJECTS paths with the TRACKER project in tracker/urls.py
+1. create the project/list.html
+
