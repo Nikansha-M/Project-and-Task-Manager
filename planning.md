@@ -64,10 +64,20 @@
 
 
 ### Project DetailView
-1. in projects/views.py create class ProjectDetailView with the path ✔️
+1. in projects/views.py create class ProjectDetailView ✔️
     1. import:  from django.views.generic.detail import DetailView ✔️
 1. in projects/urls.py register the view with the path "<int:pk>/" and the name "show_project" ✔️
 1. Create detail.html
 1. update list.html
     1. update to show num of tasks for a project ✔️
     1. include link from project name to detail view for that project ✔️
+
+
+### Project CreateView
+1. in projects/views.py create class ProjectCreateView
+    1. will show the name, description, and members properties ✔️
+1. if project successfully created, redirect to detail page for that project ✔️
+1. in projects/urls.py register view with the path "create/" in the projects urls.py and the name
+"create_project" ✔️
+1. create create.html template ✔️
+1. update list view (list.html) for Project to navigate to new create view ✔️
