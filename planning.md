@@ -43,3 +43,8 @@
 1. in tracker/settings.py add:  LOGIN_REDIRECT_URL = "home" to the last line in the file ✔️
 1. create a login.html file:  accounts app -> create templates folder -> create registration folder -> create login.html ✔️
     1. create a POST form ✔️
+
+
+### Logout 
+1. in accounts/urls.py import LogoutView & register LogoutView path in urlpatterns ✔️
+1. in tracker/settings.py add:  LOGOUT_REDIRECT_VIEW="login" ✔️
