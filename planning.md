@@ -96,4 +96,14 @@
 ### Task ListView
 1. TaskListView so that user can only see tasks assigned to them. filter with assignee = logged in user ✔️
 1. Register TaskListView in tasks/urls.py, for the path "mine/" and the name "show_my_tasks" in the tasks urls.py file ✔️
-1. create tasks/list.html
+1. create tasks/list.html ✔️
+
+
+### Allows user to update status on assigned task(s) from incomplete to complete
+1. create TaskUpdateView in tasks/views.py, fields = is_completed ✔️
+    1. when the view successfully handles a submission, redirect to "show_my_tasks" URL path, redirect to the "My Tasks" view (success_url property on a view class)
+1. in tasks/urls.py register the view for the path "<int:pk>/complete/" and the name "complete_task" in the tasks urls.py file ✔️
+1. NO HTML TEMPLATE for UpdateView! ✔️
+1. modify tasks/list.html ✔️
+
+
