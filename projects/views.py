@@ -27,7 +27,7 @@ class ProjectDetailView(LoginRequiredMixin, DetailView):
 class ProjectCreateView(LoginRequiredMixin, CreateView):
     model = Project
     template_name = "projects/create.html"
-    # members property is manytomanyfield
+    # members property is models.manytomanyfield
     fields = ["name", "description", "members"]
 
     # if project successfully created, redirect to

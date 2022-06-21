@@ -81,3 +81,13 @@
 "create_project" ✔️
 1. create create.html template ✔️
 1. update list view (list.html) for Project to navigate to new create view ✔️
+
+
+### Task CreateView
+1. in tasks/views.py create a TaskCreateView
+    1. fields = name, start date, due date, project, assignee (everything in the model except is completed)
+    1. when view successfully handles form submission redirect to detail page of task's project
+1. Register that view in the tasks app for the path "create/" and the name "create_task" in a new file named tasks/urls.py ✔️
+1. Include the URL patterns from the tasks app in the tracker project with the prefix "tasks/" ✔️
+1. HTML template to create a new task : tasks -> templates -> tasks -> create.html ✔️
+1. Add link to create a task from Project detail page ✔️ 
