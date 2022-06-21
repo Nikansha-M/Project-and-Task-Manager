@@ -91,3 +91,9 @@
 1. Include the URL patterns from the tasks app in the tracker project with the prefix "tasks/" ✔️
 1. HTML template to create a new task : tasks -> templates -> tasks -> create.html ✔️
 1. Add link to create a task from Project detail page ✔️ 
+
+
+### Task ListView
+1. TaskListView so that user can only see tasks assigned to them. filter with assignee = logged in user ✔️
+1. Register TaskListView in tasks/urls.py, for the path "mine/" and the name "show_my_tasks" in the tasks urls.py file ✔️
+1. create tasks/list.html
