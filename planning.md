@@ -113,3 +113,7 @@
     1. add the configuration setting to disable sanitation  ✔️
 1. projects/detail.html load the markdownify template library:  {% load markdownify %} ✔️
     1. change p tag and {{ project.description }} to {{ project.description|markdownify }} ✔️
+
+
+### Base.HTML
+1. update with navigation links
