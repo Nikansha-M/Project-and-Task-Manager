@@ -48,3 +48,13 @@
 ### Logout 
 1. in accounts/urls.py import LogoutView & register LogoutView path in urlpatterns ✔️
 1. in tracker/settings.py add:  LOGOUT_REDIRECT_VIEW="login" ✔️
+
+
+### Signup
+1. In accounts/views.py create signup function ✔️
+    1. import:  from django.contrib.auth.forms import UserCreationForm ✔️
+    1. use the create_user method in your function, ✔️
+        1. use form = UserCreationForm -- import:  from django.contrib.auth.models import User
+        1. use the login function -- import:  from django.contrib.auth import login
+1. in accounts/templates/registration, create signup.html ✔️
+1. in accounts/urls.py add signup to URLPATTERNS ✔️
