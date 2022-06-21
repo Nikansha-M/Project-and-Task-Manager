@@ -60,4 +60,14 @@
 1. in accounts/urls.py add signup to URLPATTERNS ✔️
 
 
-### Create Task Model
+### Create Task Model in tasks/models.py and register in admin
+
+
+### Project DetailView
+1. in projects/views.py create class ProjectDetailView with the path ✔️
+    1. import:  from django.views.generic.detail import DetailView ✔️
+1. in projects/urls.py register the view with the path "<int:pk>/" and the name "show_project" ✔️
+1. Create detail.html
+1. update list.html
+    1. update to show num of tasks for a project ✔️
+    1. include link from project name to detail view for that project ✔️
