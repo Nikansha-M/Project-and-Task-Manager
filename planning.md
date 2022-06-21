@@ -58,3 +58,6 @@
         1. use the login function -- import:  from django.contrib.auth import login
 1. in accounts/templates/registration, create signup.html ✔️
 1. in accounts/urls.py add signup to URLPATTERNS ✔️
+
+
+### Create Task Model
