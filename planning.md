@@ -107,3 +107,9 @@
 1. modify tasks/list.html ✔️
 
 
+### Install Markdownify
+1. pip install django-markdownify ✔️
+1. tracker/settings.py add markdownify to INSTALLED_APPS ✔️
+    1. add the configuration setting to disable sanitation  ✔️
+1. projects/detail.html load the markdownify template library:  {% load markdownify %} ✔️
+    1. change p tag and {{ project.description }} to {{ project.description|markdownify }} ✔️
