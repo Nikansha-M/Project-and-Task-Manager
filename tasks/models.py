@@ -1,6 +1,7 @@
 from django.db import models
 
 from django.conf import settings
+
 USER_MODEL = settings.AUTH_USER_MODEL
 
 # Create your models here.
@@ -12,15 +13,10 @@ class Task(models.Model):
     due_date = models.DateTimeField()
     is_completed = models.BooleanField(default=False)
     project = models.ForeignKey(
-        "projects.Project",
-        related_name="tasks",
-        on_delete=models.CASCADE
+        "projects.Project", related_name="tasks", on_delete=models.CASCADE
     )
     assignee = models.ForeignKey(
-        USER_MODEL,
-        related_name="tasks",
-        on_delete=models.SET_NULL,
-        null=True
+        USER_MODEL, related_name="tasks", on_delete=models.SET_NULL, null=True
     )
 
     def __str__(self):

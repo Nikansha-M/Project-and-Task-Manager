@@ -3,43 +3,43 @@
 
 
 {% block content %}
-<main>
-    <div>
-        <h1>{{ project.name }}</h1>
-        {{ project.description|markdownify }}
-        <h2>Tasks</h2>
-        <p>
-            <a href="{% url 'create_task' %}">Create a new task</a>
-        </p>
-        {% if project.tasks.all|length > 0 %}
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Assignee</th>
-                    <th>Start date</th>
-                    <th>Due date</th>
-                    <th>Is completed</th>
-                </tr>
-            </thead>
+    <main>
+        <div>
+            <h1>{{ project.name }}</h1>
+            {{ project.description|markdownify }}
+            <h2>Tasks</h2>
+            <p>
+                <a href="{% url 'create_task' %}">Create a new task</a>
+            </p>
+            {% if project.tasks.all|length > 0 %}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Assignee</th>
+                            <th>Start date</th>
+                            <th>Due date</th>
+                            <th>Is completed</th>
+                        </tr>
+                    </thead>
 
-            <tbody>
-                {% for assignment in project.tasks.all %}
-                <tr>
-                    <td>{{ assignment.name }}</td>
-                    <td>{{ assignment.assignee }}</td>
-                    <td>{{ assignment.start_date|date:"m-d-Y" }}</td>
-                    <td>{{ assignment.due_date|date:"m-d-Y" }}</td>
-                    {% comment %} instead of True/False, web page will display yes (true) or no (false). using capfirst to capitalize yes to Yes and no to No{% endcomment %}
-                    <td>{{ assignment.is_completed|yesno|capfirst }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-        
-        {% else %}
-        <p>This project has no tasks.</p>
-        {% endif %}
-    </div>
-</main>
+                    <tbody>
+                        {% for assignment in project.tasks.all %}
+                            <tr>
+                                <td>{{ assignment.name }}</td>
+                                <td>{{ assignment.assignee }}</td>
+                                <td>{{ assignment.start_date|date:"m-d-Y" }}</td>
+                                <td>{{ assignment.due_date|date:"m-d-Y" }}</td>
+                                {% comment %} instead of True/False, web page will display yes (true) or no (false). using capfirst to capitalize yes to Yes and no to No{% endcomment %}
+                                <td>{{ assignment.is_completed|yesno|capfirst }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+
+            {% else %}
+                <p>This project has no tasks.</p>
+            {% endif %}
+        </div>
+    </main>
 {% endblock content %}

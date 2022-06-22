@@ -1,11 +1,10 @@
-from typing import List
 from tasks.models import Task
 
 from django.views.generic.edit import CreateView, UpdateView
 from django.views.generic.list import ListView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-from django.urls import reverse_lazy
+from django.urls import reverse, reverse_lazy
 
 # Create your views here.
 
@@ -16,7 +15,11 @@ class TaskCreateView(LoginRequiredMixin, CreateView):
     fields = ["name", "start_date", "due_date", "project", "assignee"]
 
     def get_success_url(self):
-        return reverse_lazy("show_project", args=[self.object.id])
+        # self refers to model Task
+        # .object refers to all the items in the Task table
+        # .project is a foreign key to the project model, that's how you
+        # get back over to the model project
+        return reverse("show_project", args=[self.object.project.id])
 
 
 class TaskListView(LoginRequiredMixin, ListView):
